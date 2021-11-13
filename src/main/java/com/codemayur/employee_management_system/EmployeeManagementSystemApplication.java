@@ -1,4 +1,4 @@
-package com.codemayur.employeeManagementSystem;
+package com.codemayur.employee_management_system;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
