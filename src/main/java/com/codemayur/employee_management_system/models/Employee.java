@@ -1,7 +1,12 @@
 package com.codemayur.employee_management_system.models;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
+@ApiModel(description = "Details about the Employee")
 public class Employee {
 
+	@ApiModelProperty(notes = "The unique ID of the Employee")
 	private String id;
 	private String firstName;
 	private String lastName;

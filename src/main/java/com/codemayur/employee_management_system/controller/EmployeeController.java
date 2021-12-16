@@ -16,6 +16,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.codemayur.employee_management_system.models.Employee;
 import com.codemayur.employee_management_system.service.EmployeeService;
 
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
+
 @RestController
 @RequestMapping("employee")
 public class EmployeeController {
@@ -28,6 +31,7 @@ public class EmployeeController {
 	}
 
 	@GetMapping("getEmployee")
+	@ApiOperation(value = "Get All Employees", notes = "Get All Employees Notes")
 	public ResponseEntity<Map<String, Object>> getEmployee() {
 		Map<String, Object> responseMap = new HashMap<>();
 		List<Employee> employees;
@@ -45,7 +49,8 @@ public class EmployeeController {
 	}
 
 	@GetMapping("getEmployee/{employeeId}")
-	public ResponseEntity<Map<String, Object>> getEmployee(@PathVariable String employeeId) {
+	public ResponseEntity<Map<String, Object>> getEmployee(
+			@ApiParam(value = "ID value of the employee you need to retreive") @PathVariable String employeeId) {
 		Map<String, Object> responseMap = new HashMap<>();
 		Optional<Employee> employeeOptional;
 		try {
