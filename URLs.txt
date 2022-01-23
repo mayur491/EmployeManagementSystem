@@ -1,0 +1,9 @@
+GET		http://localhost:8080/swagger-ui.html
+GET		http://localhost:8080/actuator/
+GET		http://localhost:8080/actuator/health
+GET		http://localhost:8080/actuator/info
+GET		http://localhost:8080/actuator/beans
+GET		http://localhost:8080/actuator/env
+GET		http://localhost:8080/actuator/httptrace
+GET		http://localhost:8080/employee/getEmployee
+GET		http://localhost:8080/employee/getEmployee/1

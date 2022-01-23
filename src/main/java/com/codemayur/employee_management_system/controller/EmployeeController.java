@@ -31,7 +31,7 @@ public class EmployeeController {
 	}
 
 	@GetMapping("getEmployee")
-	@ApiOperation(value = "Get All Employees", notes = "Get All Employees Notes")
+	@ApiOperation(value = "Get All Employees", notes = "This API will return the details of all the employees")
 	public ResponseEntity<Map<String, Object>> getEmployee() {
 		Map<String, Object> responseMap = new HashMap<>();
 		List<Employee> employees;
