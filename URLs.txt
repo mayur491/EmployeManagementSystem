@@ -6,4 +6,4 @@ GET		http://localhost:8080/actuator/beans
 GET		http://localhost:8080/actuator/env
 GET		http://localhost:8080/actuator/httptrace
 GET		http://localhost:8080/employee/getEmployee
-GET		http://localhost:8080/employee/getEmployee/1
+GET		http://localhost:8080/employee/getEmployee/<employeeId>
