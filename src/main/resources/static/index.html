@@ -1,0 +1,54 @@
+<html>
+
+<head>
+	<title>Employee Management System</title>
+</head>
+
+<body>
+
+	<table>
+
+		<caption>API Calls</caption>
+
+		<tr>
+
+			<th id="api">APIs</th>
+			<th id="call">Call</th>
+
+		</tr>
+
+		<tr>
+
+			<td>Get Employee</td>
+			<td>
+				<form action="employee/getEmployee" method="GET">
+					<input type="text" id="employeeId" name="employeeId" placeholder="employeeId"><br>
+					<input type="submit" value="Submit">
+				</form>
+			</td>
+
+		</tr>
+
+		<tr>
+
+			<td>Set Employee</td>
+			<td>
+				<form action="employee/setEmployee" method="POST">
+					<input type="text" id="firstName" name="firstName" placeholder="firstName"><br>
+					<input type="text" id="lastName" name="lastName" placeholder="lastName"><br>
+					<input type="number" id="age" name="age" placeholder="age"><br>
+					<select id="gender" name="gender">
+						<option value="MALE">Male</option>
+						<option value="FEMALE">Female</option>
+					</select>
+					<input type="submit" value="Submit">
+				</form>
+			</td>
+
+		</tr>
+
+	</table>
+
+</body>
+
+</html>

@@ -3,24 +3,36 @@ package com.codemayur.employee_management_system.entity;
 import com.codemayur.employee_management_system.enums.Gender;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 /**
  * @author mayur.somani
  */
-//@Entity
-@Data
+@Entity
+@Getter
+@Setter
+@ToString
 @NoArgsConstructor
 @AllArgsConstructor
 @ApiModel(description = "Details of the Employee")
 public class Employee {
 
-    //	@Id
-//    @GeneratedValue(strategy = GenerationType.AUTO)
+    public Employee(String firstName, String lastName, Integer age, Gender gender) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.gender = gender;
+    }
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @ApiModelProperty(notes = "The unique ID of the Employee")
-    private String id;
+    private Long id;
 
     @ApiModelProperty(notes = "The first name of the Employee")
     private String firstName;
