@@ -17,4 +17,10 @@ public interface EmployeeDao extends CrudRepository<Employee, Long> {
     )
     List<Employee> findAllByName(String firstName, String lastName);
 
+    @Query("SELECT e " +
+            "FROM Employee e " +
+            "WHERE e.email = ?1 "
+    )
+    List<Employee> findByEmail(String email);
+
 }

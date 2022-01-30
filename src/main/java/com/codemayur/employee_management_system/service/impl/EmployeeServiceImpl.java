@@ -43,7 +43,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         if(employeeOptional.isPresent()) {
             return EmployeeConvertor.employeeEntityToDto(employeeOptional.get());
         } else {
-            throw new EmployeeNotFoundException(String.format("Employee with ID '%s' Not Found", employeeId));
+            throw new EmployeeNotFoundException(String.format("Employee with ID '%s' Not Found.", employeeId));
         }
     }
 
@@ -56,7 +56,12 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public Long deleteEmployeeById(Long employeeId) {
-        employeeDao.deleteById(employeeId);
+        Optional<Employee> employeeOptional = employeeDao.findById(employeeId);
+        if(employeeOptional.isPresent()) {
+            employeeDao.deleteById(employeeId);
+        } else {
+            throw new EmployeeNotFoundException(String.format("Employee with ID '%s' Not Found.", employeeId));
+        }
         return employeeId;
     }
 

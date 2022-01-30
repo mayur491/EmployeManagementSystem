@@ -9,6 +9,6 @@ public class Constants {
     }
 
     public static final String MESSAGE = "message";
-    public static final String GENERIC_ERROR_MSG = "Something Went Wrong";
+    public static final String GENERIC_ERROR_MSG = "Something Went Wrong.";
 
 }

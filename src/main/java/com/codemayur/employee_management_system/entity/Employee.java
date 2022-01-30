@@ -22,9 +22,10 @@ import javax.persistence.Id;
 @ApiModel(description = "Details of the Employee")
 public class Employee {
 
-    public Employee(String firstName, String lastName, Integer age, Gender gender) {
+    public Employee(String firstName, String lastName, String email, Integer age, Gender gender) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.email = email;
         this.age = age;
         this.gender = gender;
     }
@@ -40,10 +41,13 @@ public class Employee {
     @ApiModelProperty(notes = "The last name of the Employee")
     private String lastName;
 
+    @ApiModelProperty(notes = "The email of the Employee")
+    private String email;
+
     @ApiModelProperty(notes = "The age of the Employee")
     private Integer age;
 
-    @ApiModelProperty(notes = "The Gender of the Employee (MALE/FEMALE/OTHERS)")
+    @ApiModelProperty(notes = "The Gender of the Employee")
     private Gender gender;
 
 }

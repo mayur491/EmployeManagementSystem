@@ -19,10 +19,11 @@ class EmployeeTest {
 
     @Test
     void testAllArgsConstructor() {
-        Employee employee = new Employee(1L, "Mayur", "Somani", 26, Gender.MALE);
+        Employee employee = new Employee(1L, "Mayur", "Somani", "mayur.somani@codemayur.com", 26, Gender.MALE);
         assertThat(employee.getId()).isEqualTo(1L);
         assertThat(employee.getFirstName()).isEqualTo("Mayur");
         assertThat(employee.getLastName()).isEqualTo("Somani");
+        assertThat(employee.getEmail()).isEqualTo("mayur.somani@codemayur.com");
         assertThat(employee.getAge()).isEqualTo(26);
         assertThat(employee.getGender()).isEqualTo(Gender.MALE);
     }

@@ -1,7 +1,5 @@
 package com.codemayur.employee_management_system.configurations;
 
-import org.springframework.boot.actuate.trace.http.HttpTraceRepository;
-import org.springframework.boot.actuate.trace.http.InMemoryHttpTraceRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.PathSelectors;
@@ -17,20 +15,9 @@ import java.util.Collections;
  * @author mayur.somani
  */
 @Configuration
-public class ConfigurationClass {
+public class SwaggerConfig {
 
-    /**
-     * Depends on Spring Boot Actuator Dependency.<br>
-     * Added property management.endpoints.web.exposure.include in application
-     * properties.<br>
-     * URL example: GET http://localhost:8080/actuator/httptrace<br>
-     *
-     * @return InMemoryHttpTraceRepository
-     */
-    @Bean
-    public HttpTraceRepository httpTraceRepository() {
-        return new InMemoryHttpTraceRepository();
-    }
+    public static final String WEBSITE_URL = "https://codemayur.yolasite.com/en/";
 
     /**
      * @return Docket
@@ -38,6 +25,7 @@ public class ConfigurationClass {
     @Bean
     public Docket swaggerConfiguration() {
         return new Docket(DocumentationType.SWAGGER_2)
+                .useDefaultResponseMessages(false)
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.codemayur.employee_management_system"))
                 .paths(PathSelectors.any())
@@ -49,10 +37,10 @@ public class ConfigurationClass {
         return new ApiInfo("Employee Management System",
                 "APIs for Employee Management System",
                 "1.0",
-                "https://codemayur.yolasite.com/en/",
-                new Contact("Mayur Somani", "https://codemayur.yolasite.com/en/", "mayur491@gmail.com"),
+                WEBSITE_URL,
+                new Contact("Mayur Somani", WEBSITE_URL, "mayur491@gmail.com"),
                 "API License",
-                "https://codemayur.yolasite.com/en/",
+                WEBSITE_URL,
                 Collections.emptyList());
     }
 

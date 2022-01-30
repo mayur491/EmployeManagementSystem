@@ -5,7 +5,6 @@ import com.codemayur.employee_management_system.entity.Employee;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
-import java.util.UUID;
 import java.util.stream.Collectors;
 
 /**
@@ -22,6 +21,7 @@ public class EmployeeConvertor {
         employeeDto.setId(employee.getId());
         employeeDto.setFirstName(employee.getFirstName());
         employeeDto.setLastName(employee.getLastName());
+        employeeDto.setEmail(employee.getEmail());
         employeeDto.setAge(employee.getAge());
         employeeDto.setGender(employee.getGender());
         return employeeDto;
@@ -35,6 +35,7 @@ public class EmployeeConvertor {
         Employee employee = new Employee();
         employee.setFirstName(employeeDto.getFirstName());
         employee.setLastName(employeeDto.getLastName());
+        employee.setEmail(employeeDto.getEmail());
         employee.setAge(employeeDto.getAge());
         employee.setGender(employeeDto.getGender());
         return employee;

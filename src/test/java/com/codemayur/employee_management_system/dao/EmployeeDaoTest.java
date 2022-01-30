@@ -32,6 +32,7 @@ class EmployeeDaoTest {
         Employee employee = new Employee(
                 "Employee",
                 "Employee",
+                "employee@codemayur.com",
                 101,
                 Gender.OTHER
         );
@@ -50,6 +51,7 @@ class EmployeeDaoTest {
         Employee employee = new Employee(
                 "Employee2",
                 "Employee2",
+                "employee2@codemayur.com",
                 101,
                 Gender.OTHER
         );

@@ -19,7 +19,7 @@ import javax.validation.constraints.NotNull;
 @ApiModel(description = "Details of the EmployeeDto")
 public class EmployeeDto {
 
-    @ApiModelProperty(notes = "The identifier of the Employee")
+    @ApiModelProperty(hidden = true)
     private Long id;
 
     @NotBlank(message = "First name is mandatory")
@@ -29,6 +29,10 @@ public class EmployeeDto {
     @NotBlank(message = "Last name is mandatory")
     @ApiModelProperty(notes = "The last name of the Employee")
     private String lastName;
+
+    @NotBlank(message = "Email is mandatory")
+    @ApiModelProperty(notes = "The email of the Employee")
+    private String email;
 
     @NotNull(message = "Age is mandatory")
     @ApiModelProperty(notes = "The age of the Employee")

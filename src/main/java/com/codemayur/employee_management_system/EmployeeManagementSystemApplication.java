@@ -25,13 +25,13 @@ public class EmployeeManagementSystemApplication {
     public CommandLineRunner run(EmployeeDao employeeDao) {
         return (String[] args) -> {
             List<Employee> employees = new ArrayList<>();
-            employees.add(new Employee("Mayur", "Somani", 25, Gender.MALE));
-            employees.add(new Employee("Reuben", "Fernandes", 25, Gender.MALE));
-            employees.add(new Employee("Divya", "Walke", 23, Gender.FEMALE));
-            employees.add(new Employee("Prabhat", "Gaikwad", 24, Gender.MALE));
-            employees.add(new Employee("Saurabh", "Kanojia", 26, Gender.MALE));
-            employees.add(new Employee("Aditya", "Shinde", 24, Gender.MALE));
-            employees.add(new Employee("Manoj", "Goregaonkar", 23, Gender.OTHER));
+            employees.add(new Employee("Mayur", "Somani", "mayur.somani@codemayur.com", 25, Gender.MALE));
+            employees.add(new Employee("Reuben", "Fernandes", "reuben.fernandes@codemayur.com", 25, Gender.MALE));
+            employees.add(new Employee("Divya", "Walke", "divya.walke@codemayur.com", 23, Gender.FEMALE));
+            employees.add(new Employee("Prabhat", "Gaikwad", "prabhat.gaikwad@codemayur.com", 24, Gender.MALE));
+            employees.add(new Employee("Saurabh", "Kanojia", "saurabh.kanojia@codemayur.com", 26, Gender.MALE));
+            employees.add(new Employee("Aditya", "Shinde", "aditya.shinde@codemayur.com", 24, Gender.MALE));
+            employees.add(new Employee("Manoj", "Goregaonkar", "manoj.goregaonkar@codemayur.com", 23, Gender.OTHER));
             employeeDao.saveAll(employees);
             employeeDao.findAll().forEach(System.out::println);
         };

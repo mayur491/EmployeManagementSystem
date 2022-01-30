@@ -45,6 +45,7 @@ class EmployeeServiceImplTest {
                 employeeId,
                 "Employee",
                 "Employee",
+                "employee@codemayur.com",
                 101,
                 Gender.OTHER
         );
@@ -69,6 +70,7 @@ class EmployeeServiceImplTest {
                 employeeId,
                 "Employee",
                 "Employee",
+                "employee@codemayur.com",
                 101,
                 Gender.OTHER
         );
@@ -109,6 +111,7 @@ class EmployeeServiceImplTest {
         Employee employee = new Employee(
                 "Employee",
                 "Employee",
+                "employee@codemayur.com",
                 101,
                 Gender.OTHER
         );
